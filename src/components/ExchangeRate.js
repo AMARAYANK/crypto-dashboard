@@ -4,6 +4,7 @@ import axios from "axios";
 const ExchangeRate = ({exchangeRate, chosenPrimaryCurrency, chosenSecondaryCurrency, setExchangeRate}) => {
 
   useEffect(() => {
+    
     const options = {
       method: "GET",
       url: "https://alpha-vantage.p.rapidapi.com/query",
@@ -27,7 +28,7 @@ const ExchangeRate = ({exchangeRate, chosenPrimaryCurrency, chosenSecondaryCurre
         console.error(error);
       })
     
-  }, [chosenPrimaryCurrency, chosenSecondaryCurrency])
+  }, [chosenPrimaryCurrency, chosenSecondaryCurrency]  )  // eslint-disable-next-line
 
     return (
       <div className='exchange-rate'>
